@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head') %>
+        <title>CRUD Operation</title>
+</head>
+
+<body>
+    <%- include('includes/header')%>
+        
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>District</th>
+            </tr>
+            <% if (!users|| users.length===0){ %>
+                <p>No users found, maybe start adding some?</p>
+                <a href="/create">Add New Member</a>
+                <% } else { %>
+                    <tbody>
+                        <% for (const user of users){ %>
+                            
+                            <tr>
+                                <td>
+                                    <%= user.id %>
+                                </td>
+                                <td>
+                                    <%= user.name %>
+                                </td>
+                                <td>
+                                    <%= user.age %>
+                                </td>
+                                <td>
+                                    <%= user.gender %>
+                                </td>
+                                <td>
+                                    <%= user.district %>
+                                </td>
+                                <td>
+                                    <form action="/edit/<%= user.id %>" method="get"><button type="submit" id="edit">Edit</button></form>
+                                </td>
+                                <td>
+                                    <form action="/delete/<%= user.id %>" method="get"><button type="submit" id="delete">Delete</button></form>
+                                </td>
+                            </tr>
+                            
+                            <form action="" method="POST">
+                                
+                                
+                            </form>
+                            <% } %>
+                </tbody>
+                <% } %>
+        </table>
+
+</body>
+
+</html>

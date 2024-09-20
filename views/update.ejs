@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('includes/head') %>
+    <%- include('includes/header') %>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <h1>Edit User Details</h1>
+    <form action="/edit/<%= user.id %>" method="post">
+        <label for="name">Name</label>
+        <input type="text" name = "name" id="name" value="<%= user.name %>">
+
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age" value="<%= user.age%>">
+
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" id="gender" value="<%= user.gender %>">
+
+        <label for="district">District</label>
+        <input type="text" name="district" id="district" value="<%= user.district %>">
+
+        <button class="btn">Update user</button>
+    </form>
+</body>
+</html>

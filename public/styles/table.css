@@ -1,0 +1,36 @@
+table {
+    width: 80%; /* Set table width to 80% of the page */
+    margin: 20px auto; /* Center the table and add margin */
+    border-collapse: collapse; /* Remove gaps between borders */
+    font-family: Arial, sans-serif; /* Font for text */
+    font-size: 16px; /* Text size */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the table */
+}
+
+th, td {
+    padding: 12px 15px; /* Padding inside table cells */
+    text-align: center; /* Center-align text */
+    border-bottom: 1px solid #ddd; /* Add light border between rows */
+}
+
+th {
+    background-color: rgb(119, 98, 146); /* Green background for header */
+    color: white; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #fff; /* White background for odd rows */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+td button {
+    padding: 5px 10px; /* Adjust button size inside table */
+    font-size: 14px; /* Adjust button text size */
+}
